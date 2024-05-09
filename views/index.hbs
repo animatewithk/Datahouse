@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dropdown Checkbox</title>
+
+	<style>
+		body{
+			background: black;
+			color: white;
+		}
+		#navbar{
+			position: relative;
+			display: flex;
+			justify-content: left;
+			background-color: blue;
+			padding: 0;
+			margin: 0px;
+			border-radius: 10px;
+			height: 50px;
+			align-items: center;
+			font-size: 18px
+		}
+		#navbar a{
+			color: white;
+			text-decoration: none;
+			padding-right: 40px;
+		}
+		#navbar ul{
+			margin: 0px 0px 0px 15px;
+			padding:0;
+		}
+		#sear{
+			position: absolute; /* Added to position the button */
+			right: 10px; /* Added to set a 10-pixel margin from the right side */
+			top: 50%; /* Vertically centers the button */
+			transform: translateY(-50%); /* Vertically centers the button */
+			height: 30px;
+			background-color: transparent;
+			border: 0px;
+			color: white
+		}
+		#menu{
+			display: none;
+			position: absolute;
+			background-color: white;
+			min-width: 160px;
+			z-index: 1;
+			left: auto;
+			right: 5px;
+			border-radius: 10px;
+			color: black;
+		}
+		#srchbar{
+			width: 140px;
+			border-radius: 10px;
+			margin: 5px;
+			border: 1px solid gray;
+			font-size: 15px;
+			padding: 10px;
+		}
+		#form ul{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			color: black;
+		}
+		#btn{
+		 background: blue;
+		 height: 30px;
+			width: 40px;
+			border: 0px;
+			border-radius: 10px;
+			margin-left: 122px;
+			margin-right: auto;
+			margin-bottom: 10px;
+			color: white
+		}
+	</style>
+</head>
+<body>
+	<div id='navbar'>
+		<ul>
+			<a herf='/'>Biography</a>
+			<a href='/les'>Lesson</a>
+		</ul>
+		<button id='sear' onclick='dropdown()'>Search</button>
+	</div>
+	<div id='menu'>
+		<input type='text' id='srchbar' placeholder="Search...">
+	 <form id='form' action='/' method='POST'>
+			<ul id='contlist'>
+				<li><input type="checkbox" calss="option" value="Albert Einstein">Albert Einstein</li>
+				<li><input type="checkbox" calss="option" value="Isaac Newton">Isaac Newton</li>
+				<li><input type="checkbox" calss="option" value="Elon Musk">Elon Musk</li>
+			</ul>
+			<button id='btn' type='submit'>Go</button>
+	 </form>
+	</div>
+	<hr width="85%" color="gold">
+	<h1>Biography</h1>
+
+	<script>
+		function dropdown(){
+			document.getElementById('menu').style.display = 'block'
+		}
+	</script>
+</body>
+</html>
