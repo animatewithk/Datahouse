@@ -21,7 +21,8 @@ app.post("/", (req, res)=>{
 	stri = req.body.options.join(', ')
  //Assigning the value of biography
 	if(stri == 'Albert Einstein'){
-	 bio = 'Albert Einstein was a German-born theoret'
+	 bio = `Albert Einstein was a German-born 
+		       theoret`
  }else{
 	 bio = 'information not found yet'
  }
