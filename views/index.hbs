@@ -42,7 +42,6 @@
 			color: white
 		}
 		#menu{
-			display: none;
 			position: absolute;
 			background-color: white;
 			min-width: 160px;
@@ -77,6 +76,10 @@
 			margin-bottom: 10px;
 			color: white
 		}
+		#hr{
+			margin-right: 20px;
+			margin-left: 20px;
+		}
 	</style>
 </head>
 <body>
@@ -91,19 +94,24 @@
 		<input type='text' id='srchbar' placeholder="Search...">
 	 <form id='form' action='/' method='POST'>
 			<ul id='contlist'>
-				<li><input type="checkbox" calss="option" value="Albert Einstein">Albert Einstein</li>
-				<li><input type="checkbox" calss="option" value="Isaac Newton">Isaac Newton</li>
-				<li><input type="checkbox" calss="option" value="Elon Musk">Elon Musk</li>
+				<li><input type="checkbox" name="options[]" class="option" value="Albert Einstein">Albert Einstein</li>
+				<li><input type="checkbox" name="options[]" class="option" value="Isaac Newton">Isaac Newton</li>
+				<li><input type="checkbox" name="options[]" class="option" value="Elon Musk">Elon Musk</li>
 			</ul>
 			<button id='btn' type='submit'>Go</button>
 	 </form>
 	</div>
-	<hr width="85%" color="gold">
+	<hr color='gold' id='hr'>
 	<h1>Biography</h1>
-
+ <p>{{bio}}</p>
 	<script>
+		document.getElementById('menu').style.display = 'none'
 		function dropdown(){
-			document.getElementById('menu').style.display = 'block'
+			if(document.getElementById('menu').style.display == 'none'){
+				document.getElementById('menu').style.display = 'block'
+			}else{
+				document.getElementById('menu').style.display = 'none'
+			}
 		}
 	</script>
 </body>
